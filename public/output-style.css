@@ -864,7 +864,7 @@ video {
 }
 
 .bg-space{
-  background-image: url('/public/assets/peakpx.jpg');
+  background-image: url('https://res.cloudinary.com/dk3msiid1/image/upload/v1682114678/cosmic-canvas/peakpx_gimnlz.jpg');
 }
 
 .from-green-300{
@@ -1157,7 +1157,8 @@ video {
 @font-face {
   font-family: "Space Explorer";
 
-  src: url("../public/fonts/SPACE-EXPLORER.woff") format("woff");
+  src: url("https://res.cloudinary.com/dk3msiid1/raw/upload/v1682114687/cosmic-canvas/SPACE-EXPLORER_oj6ayu.woff")
+    format("woff");
 }
 
 .group:hover .group-hover\:-left-0{

@@ -21,7 +21,8 @@ module.exports = {
         appear2: "appear2 1s ease-in-out",
       },
       backgroundImage: {
-        space: "url('/public/assets/peakpx.jpg')",
+        space:
+          "url('https://res.cloudinary.com/dk3msiid1/image/upload/v1682114678/cosmic-canvas/peakpx_gimnlz.jpg')",
       },
       keyframes: {
         rotate: {
