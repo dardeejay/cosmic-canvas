@@ -14,6 +14,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body
     class="bg-space scrollbar scrollbar-thin relative scrollbar-track-transparent scrollbar-thumb-red-900 scrollbar-thumb-rounded-full"
@@ -26,7 +27,7 @@
       id="blur"
       class="fixed w-full h-full z-[-100] backdrop-blur-[90px] bg-black/50"
     ></div> -->
-
+    <!-- Navigation Bar -->
     <div
       class="flex justify-between shadow-md shadow-gray-800 px-10 bg-black/50 bg-cover bg-no-repeat"
     >
@@ -44,7 +45,7 @@
         <a href="#" class="navbar-links goto-tag">ABOUT</a>
       </div>
     </div>
-
+    <!-- Hero Section -->
     <div id="hero-section" class="fixed h-screen md:h-full w-full z-[-1]">
       <div class="h-screen overflow-hidden text-center relative">
         <div class="mt-52">
@@ -65,6 +66,7 @@
         />
       </div>
     </div>
+    <!-- Second Section -->
     <div
       class="bg-white h-screen mt-[100vh] sticky top-0 text-center grid place-items-center"
       id="second-section"
@@ -83,27 +85,73 @@
         <img src="" alt="" id="apodImage" class="w-1/3" draggable="false" />
       </div> -->
     </div>
-    <div class="h-screen bg-black relative overflow-hidden" id="third-section">
+    <!-- Third Section -->
+    <div
+      class="h-screen bg-customBlack overflow-hidden flex flex-col gap-20 sticky top-0"
+      id="third-section"
+    >
       <h1
-        class="text-9xl font-bold font-Poppins text-white uppercase text-right relative z-10"
-        id="apodTitle"
+        class="text-5xl font-bold font-Poppins text-white uppercase text-center pt-12 relative z-10"
+        id="apodDate"
       ></h1>
       <div class="container mx-auto flex justify-between items-center">
-        <div class="w-1/3 relative group">
-          <a href="" id="apodImageLink" target="_blank"
-            ><img src="" alt="" class="w-full relative z-10" id="apodImage"
-          /></a>
-          <div
-            class="bg-white w-full h-full absolute top-3 -left-3 group-hover:top-0 group-hover:-left-0 transition-all duration-200 ease-in-out"
-          ></div>
-        </div>
         <div
-          class="text-white w-1/2 text-lg font-Poppins font-extralight text-right"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          class="text-white w-1/2 font-Poppins flex flex-col justify-between gap-20"
         >
-          <p id="apodExplanation"></p>
+          <h1
+            class="text-5xl font-bold font-Poppins text-white uppercase text-left pt-5 relative z-10"
+            id="apodTitle"
+          ></h1>
+          <p
+            class="text-xl font-extralight text-justify indent-10"
+            id="apodExplanation"
+          ></p>
+        </div>
+
+        <div class="w-1/3">
+          <div
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            class="relative group"
+          >
+            <a href="" id="apodImageLink" target="_blank"
+              ><img src="" alt="" class="w-full relative z-10" id="apodImage"
+            /></a>
+            <div
+              class="bg-white w-full h-full absolute top-3 -left-3 group-hover:top-0 group-hover:-left-0 transition-all duration-200 ease-in-out"
+            ></div>
+          </div>
+          <h1
+            id="apodCredits"
+            class="text-center font-Poppins text-xl text-customWhite mt-3 capitalize"
+          ></h1>
         </div>
       </div>
     </div>
+    <!-- Fourth Section -->
+    <div
+      class="h-full min-h-screen bg-customWhite relative flex flex-col gap-20"
+      id="fourth-section"
+    >
+      <h1
+        class="text-5xl font-bold font-Poppins text-customBlack uppercase text-center pt-12 relative z-10"
+      >
+        <!-- apod in past week -->
+        APOD Archives for the Past Week
+      </h1>
+      <div class="container mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
+          id="archiveContainer"
+        ></div>
+      </div>
+    </div>
     <script src="./scripts/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
