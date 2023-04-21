@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Space Explorer";
+  src: url("../public/fonts/SPACE-EXPLORER.woff") format("woff");
+}
+
+@layer components {
+  #blob {
+    position: absolute;
+    width: 250px;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    z-index: -2;
+  }
+}
