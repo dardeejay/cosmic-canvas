@@ -589,6 +589,10 @@ video {
   left: -0.75rem;
 }
 
+.-top-20{
+  top: -5rem;
+}
+
 .left-0{
   left: 0px;
 }
@@ -670,6 +674,10 @@ video {
   height: 20rem;
 }
 
+.h-\[120vh\]{
+  height: 120vh;
+}
+
 .h-full{
   height: 100%;
 }
@@ -694,12 +702,20 @@ video {
   width: 5rem;
 }
 
+.w-3\/4{
+  width: 75%;
+}
+
 .w-3\/5{
   width: 60%;
 }
 
 .w-full{
   width: 100%;
+}
+
+.w-screen{
+  width: 100vw;
 }
 
 .-translate-x-1\/2{
@@ -836,6 +852,14 @@ video {
   overflow: hidden;
 }
 
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+
+.text-ellipsis{
+  text-overflow: ellipsis;
+}
+
 .rounded-3xl{
   border-radius: 1.5rem;
 }
@@ -901,6 +925,10 @@ video {
 
 .pt-12{
   padding-top: 3rem;
+}
+
+.pt-20{
+  padding-top: 5rem;
 }
 
 .pt-5{
@@ -1185,10 +1213,30 @@ video {
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .md\:text-8xl{
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 1024px){
   .lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:text-9xl{
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .lg\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }

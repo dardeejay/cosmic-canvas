@@ -8,6 +8,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       property="og:image"
       content="https://res.cloudinary.com/dk3msiid1/image/upload/v1682115049/cosmic-canvas/Cosmic_Canvas_-_A_gallery_of_the_Universe_jozedh.png"
@@ -51,7 +52,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body
-    class="bg-space scrollbar scrollbar-thin relative scrollbar-track-transparent scrollbar-thumb-red-900 scrollbar-thumb-rounded-full"
+    class="bg-space scrollbar scrollbar-thin relative scrollbar-track-transparent scrollbar-thumb-red-900 scrollbar-thumb-rounded-full overflow-x-hidden"
   >
     <!-- <div
       id="blob"
@@ -63,7 +64,7 @@
     ></div> -->
     <!-- Navigation Bar -->
     <div
-      class="flex justify-between shadow-md shadow-gray-800 px-10 bg-black/50 bg-cover bg-no-repeat"
+      class="flex justify-between shadow-md shadow-gray-800 px-10 bg-black/50 bg-cover bg-no-repeat w-full"
     >
       <div id="logo-container" class="">
         <img src="logo.png" alt="" class="w-20" />
@@ -80,14 +81,19 @@
       </div>
     </div>
     <!-- Hero Section -->
-    <div id="hero-section" class="fixed h-screen md:h-full w-full z-[-1]">
+    <div
+      id="hero-section"
+      class="fixed h-screen md:h-full w-full z-[-1] overflow-hidden"
+    >
       <div class="h-screen overflow-hidden text-center relative">
         <div class="mt-52">
-          <h1 class="text-9xl font-bold font-Poppins text-white animate-appear">
+          <h1
+            class="text-xl md:text-8xl lg:text-9xl font-bold font-Poppins text-white animate-appear"
+          >
             COSMIC CANVAS
           </h1>
           <p
-            class="text-xl text-white font-Poppins font-extralight animate-appear2 delay-200"
+            class="text-sm md:text-lg lg:text-xl text-white font-Poppins font-extralight animate-appear2 delay-200"
           >
             A Gallery of the Universe
           </p>
@@ -102,7 +108,7 @@
     </div>
     <!-- Second Section -->
     <div
-      class="bg-white h-screen mt-[100vh] sticky top-0 text-center grid place-items-center"
+      class="bg-white h-screen mt-[100vh] sticky top-0 text-center grid place-items-center w-screen"
       id="second-section"
     >
       <h1 class="text-9xl font-bold font-Poppins text-black">
@@ -121,7 +127,7 @@
     </div>
     <!-- Third Section -->
     <div
-      class="h-screen bg-customBlack overflow-hidden flex flex-col gap-20 sticky top-0"
+      class="h-[120vh] bg-customBlack overflow-hidden flex flex-col gap-20 sticky -top-20 pt-20"
       id="third-section"
     >
       <h1
@@ -151,10 +157,10 @@
             class="relative group"
           >
             <a href="" id="apodImageLink" target="_blank"
-              ><img src="" alt="" class="w-full relative z-10" id="apodImage"
+              ><img src="" alt="" class="w-3/4 relative z-10" id="apodImage"
             /></a>
             <div
-              class="bg-white w-full h-full absolute top-3 -left-3 group-hover:top-0 group-hover:-left-0 transition-all duration-200 ease-in-out"
+              class="bg-white w-3/4 h-full absolute top-3 -left-3 group-hover:top-0 group-hover:-left-0 transition-all duration-200 ease-in-out"
             ></div>
           </div>
           <h1

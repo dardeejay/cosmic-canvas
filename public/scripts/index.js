@@ -107,12 +107,12 @@ const getAPODArchive = async () => {
     <img src="${apod.url}" alt="${
       apod.title
     }" class="w-full h-1/2 object-cover" />
-    <div class="p-3 h-1/2 font-Poppins">
+    <div class="p-3 h-1/2 font-Poppins overflow-hidden">
       <h3 class="text-gray-600">${dateText}</h3>
       <h2 class="text-lg font-bold text-gray-800">${apod.title}</h2>
-      <p class="text-gray-600 text-sm">${truncateString(
+      <p class="text-gray-600 text-sm text-ellipsis">${truncateString(
         apod.explanation,
-        100
+        130
       )}</p>
     </div>
     `;
