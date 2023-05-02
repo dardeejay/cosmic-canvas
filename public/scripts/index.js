@@ -75,10 +75,10 @@ const getAPODArchive = async () => {
   const date = new Date();
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
-  const day = date.getDate();
+  const day = date.getDate() - 1;
 
   // get the start and end dates
-  let endDay = day - 8;
+  let endDay = day - 7;
   let endMonth = month;
   if (endDay <= 0) {
     endDay = 30 + endDay;
