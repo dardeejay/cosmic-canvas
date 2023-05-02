@@ -1,3 +1,5 @@
+![Cosmic Canvas Logo](https://example.com/cosmic-canvas-logo.png](https://res.cloudinary.com/dk3msiid1/image/upload/v1682115049/cosmic-canvas/Cosmic_Canvas_-_A_gallery_of_the_Universe_jozedh.png)
+
 # Cosmic Canvas: A Gallery of the Universe
 
 This is a repository for the Human-Computer Interaction class project at Gordon College, Philippines. The project is called Cosmic Canvas, a web application that displays a gallery of images related to space and the universe, along with information and details about each image. 
