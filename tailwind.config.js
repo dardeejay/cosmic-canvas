@@ -15,7 +15,6 @@ module.exports = {
         Poppins: ["Poppins", "sans-serif"],
       },
       animation: {
-        rotate: "rotate 15s infinite",
         rescale: "rescale 2s ease-in-out",
         appear: "appear 1.5s ease-in-out",
         appear2: "appear2 1s ease-in-out",
@@ -25,11 +24,6 @@ module.exports = {
           "url('https://res.cloudinary.com/dk3msiid1/image/upload/v1682114678/cosmic-canvas/peakpx_gimnlz.jpg')",
       },
       keyframes: {
-        rotate: {
-          from: { rotate: "0deg" },
-          "50%": { scale: "1 1.5" },
-          to: { rotate: "360deg" },
-        },
         rescale: {
           from: { opacity: 0, bottom: "-25rem" },
           to: { opacity: 1 },

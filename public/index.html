@@ -52,8 +52,14 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body
-    class="bg-space scrollbar scrollbar-thin relative scrollbar-track-transparent scrollbar-thumb-red-900 scrollbar-thumb-rounded-full overflow-x-hidden"
+    class="bg-space scrollbar scrollbar-thin relative scrollbar-track-transparent scrollbar-thumb-red-900 scrollbar-thumb-rounded-full overflow-x-hidden overflow-y-hidden"
   >
+    <div
+      class="fixed bg-customBlack z-50 h-screen w-screen transition duration-1000 grid place-items-center"
+      id="loader"
+    >
+      <div class="loader"></div>
+    </div>
     <!-- <div
       id="blob"
       class="bg-gradient-to-r from-green-300 to-purple-600 animate-rotate"
@@ -64,7 +70,7 @@
     ></div> -->
     <!-- Navigation Bar -->
     <div
-      class="flex justify-between shadow-md shadow-gray-800 px-10 bg-black/50 bg-cover bg-no-repeat w-full"
+      class="flex justify-between shadow-md shadow-gray-800 px-10 bg-black/50 bg-cover bg-no-repeat w-full z-50"
     >
       <div id="logo-container" class="">
         <img src="logo.png" alt="" class="w-20" />
@@ -88,12 +94,12 @@
       <div class="h-screen overflow-hidden text-center relative">
         <div class="mt-52">
           <h1
-            class="text-xl md:text-8xl lg:text-9xl font-bold font-Poppins text-white animate-appear"
+            class="text-6xl md:text-8xl lg:text-9xl font-bold font-Poppins text-white animate-appear"
           >
             COSMIC CANVAS
           </h1>
           <p
-            class="text-sm md:text-lg lg:text-xl text-white font-Poppins font-extralight animate-appear2 delay-200"
+            class="text-md md:text-lg lg:text-xl text-white font-Poppins font-extralight animate-appear2 delay-200"
           >
             A Gallery of the Universe
           </p>
@@ -102,7 +108,7 @@
           src="https://res.cloudinary.com/dk3msiid1/image/upload/v1682114679/cosmic-canvas/jupiter-removebg_qxygel.png"
           id="jupiter"
           alt=""
-          class="absolute left-0 right-0 ml-auto mr-auto text-center w-3/5 -bottom-40 animate-rescale"
+          class="absolute left-0 right-0 ml-auto mr-auto text-center w-full md:w-3/5 bottom-14 md:-bottom-40 animate-rescale"
         />
       </div>
     </div>
@@ -111,9 +117,12 @@
       class="bg-white h-screen mt-[100vh] sticky top-0 text-center grid place-items-center w-screen"
       id="second-section"
     >
-      <h1 class="text-9xl font-bold font-Poppins text-black">
+      <h1 class="text-5xl md:text-9xl font-bold font-Poppins text-black">
         ASTRONOMY PICTURE <br />OF THE DAY <br />
-        <a href="#third-section" class="goto-tag"
+        <a
+          href="#third-section"
+          class="goto-tag"
+          title="Astronomy Picture of the Day"
           ><i class="fa-solid fa-chevron-down text-5xl animate-bounce"></i
         ></a>
       </h1>
@@ -127,40 +136,46 @@
     </div>
     <!-- Third Section -->
     <div
-      class="h-[120vh] bg-customBlack overflow-hidden flex flex-col gap-20 sticky -top-20 pt-20"
+      class="h-full md:h-[120vh] bg-customBlack overflow-hidden flex flex-col relative gap-20 pt-20"
       id="third-section"
     >
       <h1
-        class="text-5xl font-bold font-Poppins text-white uppercase text-center pt-12 relative z-10"
+        class="text-4xl md:text-5xl font-bold font-Poppins text-white uppercase text-center pt-12 relative z-10"
         id="apodDate"
       ></h1>
-      <div class="container mx-auto flex justify-between items-center">
+      <div
+        class="container mx-auto flex flex-col-reverse md:flex-row justify-between items-center"
+      >
         <div
           data-aos="fade-up"
           data-aos-duration="1000"
-          class="text-white w-1/2 font-Poppins flex flex-col justify-between gap-20"
+          class="text-white w-full md:w-1/2 font-Poppins flex flex-col items-center md:justify-between gap-20 p-5"
         >
           <h1
-            class="text-5xl font-bold font-Poppins text-white uppercase text-left pt-5 relative z-10"
+            class="text-4xl md:text-5xl font-bold font-Poppins text-white uppercase text-left pt-5 relative z-10"
             id="apodTitle"
           ></h1>
           <p
-            class="text-xl font-extralight text-justify indent-10"
+            class="text-md md:text-xl font-extralight text-justify indent-10"
             id="apodExplanation"
           ></p>
         </div>
 
-        <div class="w-1/3">
+        <div class="w-full md:w-1/3 flex flex-col justify-center items-center">
           <div
             data-aos="fade-in"
             data-aos-duration="1000"
             class="relative group"
           >
             <a href="" id="apodImageLink" target="_blank"
-              ><img src="" alt="" class="w-3/4 relative z-10" id="apodImage"
+              ><img
+                src=""
+                alt=""
+                class="w-full md:w-3/4 relative z-10"
+                id="apodImage"
             /></a>
             <div
-              class="bg-white w-3/4 h-full absolute top-3 -left-3 group-hover:top-0 group-hover:-left-0 transition-all duration-200 ease-in-out"
+              class="bg-white md:w-3/4 w-full h-full absolute top-3 -left-3 group-hover:top-0 group-hover:-left-0 transition-all duration-200 ease-in-out"
             ></div>
           </div>
           <h1
