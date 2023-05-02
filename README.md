@@ -1,4 +1,4 @@
-![Cosmic Canvas Logo](https://example.com/cosmic-canvas-logo.png](https://res.cloudinary.com/dk3msiid1/image/upload/v1682115049/cosmic-canvas/Cosmic_Canvas_-_A_gallery_of_the_Universe_jozedh.png)
+![Cosmic Canvas Logo](https://res.cloudinary.com/dk3msiid1/image/upload/v1682115049/cosmic-canvas/Cosmic_Canvas_-_A_gallery_of_the_Universe_jozedh.png)
 
 # Cosmic Canvas: A Gallery of the Universe
 
