@@ -934,6 +934,14 @@ video {
   gap: 5rem;
 }
 
+.gap-5{
+  gap: 1.25rem;
+}
+
+.gap-4{
+  gap: 1rem;
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1383,6 +1391,10 @@ video {
 
   .md\:justify-between{
     justify-content: space-between;
+  }
+
+  .md\:gap-5{
+    gap: 1.25rem;
   }
 
   .md\:text-8xl{
