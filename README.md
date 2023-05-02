@@ -28,7 +28,7 @@ The application uses the Astronomy Picture of the Day (APOD) API and jwstapi.com
 
 ## Credits
 
-- The application was created by [your name].
+- The application was created by Dardee Jay Calura.
 - The project was created for the Human-Computer Interaction class at Gordon College, Philippines.
 - The application uses the Astronomy Picture of the Day (APOD) API and jwstapi.com to get images and information.
 - Tailwind CSS was used for styling.
