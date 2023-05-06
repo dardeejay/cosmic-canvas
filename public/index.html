@@ -52,10 +52,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body
-    class="bg-space scrollbar scrollbar-thin relative scrollbar-track-transparent scrollbar-thumb-red-900 scrollbar-thumb-rounded-full overflow-x-hidden overflow-y-hidden"
+    class="bg-space scrollbar scrollbar-thin relative scrollbar-track-transparent scrollbar-thumb-black scrollbar-thumb-rounded-full overflow-x-hidden overflow-y-hidden"
   >
     <div
-      class="fixed bg-customBlack z-50 h-screen w-screen transition duration-1000 grid place-items-center"
+      class="fixed bg-black z-50 h-screen w-screen transition duration-1000 grid place-items-center"
       id="loader"
     >
       <div class="loader"></div>
@@ -70,20 +70,29 @@
     ></div> -->
     <!-- Navigation Bar -->
     <div
-      class="flex justify-between shadow-md shadow-gray-800 px-10 bg-black/50 bg-cover bg-no-repeat w-full z-50"
+      class="flex justify-between items-center shadow-md shadow-gray-800 px-10 bg-black/50 bg-cover bg-no-repeat w-full z-50"
     >
       <div id="logo-container" class="">
         <img src="logo.png" alt="" class="w-20" />
       </div>
-      <i class="fa-light fa-bars md:hidden"></i>
+      <div class="text-customWhite text-2xl md:hidden">
+        <i class="fa-solid fa-bars" id="showMenu"></i>
+      </div>
+
       <div
         id="nav-bar-menu"
-        class="text-white k font-navFont hidden md:flex items-center justify-center gap-10"
+        class="text-white text-lg font-Poppins font-extralight h-screen w-full absolute -top-[100vh] left-0 bg-black z-20 flex flex-col md:top-0 md:w-fit md:z-0 md:flex-row md:bg-transparent md:relative md:h-full md:flex items-center justify-center gap-10 transition-all duration-300"
       >
-        <a href="#" class="navbar-links goto-tag">HOME</a>
+        <div class="md:hidden">
+          <i
+            class="fa-solid fa-times text-customWhite text-2xl absolute top-10 right-10"
+            id="hideMenu"
+          ></i>
+        </div>
+        <a href="#nav-bar-menu" class="navbar-links goto-tag">HOME</a>
         <a href="#second-section" class="navbar-links goto-tag">#APOD</a>
-        <a href="#" class="navbar-links goto-tag">JWST IMAGES</a>
-        <a href="#" class="navbar-links goto-tag">ABOUT</a>
+        <a href="#fifth-section" class="navbar-links goto-tag">PERSEVERANCE</a>
+        <a href="#about-section" class="navbar-links goto-tag">ABOUT</a>
       </div>
     </div>
     <!-- Hero Section -->
@@ -94,7 +103,7 @@
       <div class="h-screen overflow-hidden text-center relative">
         <div class="mt-52">
           <h1
-            class="text-6xl md:text-8xl lg:text-9xl font-bold font-Poppins text-white animate-appear"
+            class="text-6xl md:text-8xl lg:text-9xl font-bold font-Helvetica text-white animate-appear"
           >
             COSMIC CANVAS
           </h1>
@@ -117,7 +126,7 @@
       class="bg-white h-screen mt-[100vh] sticky top-0 text-center grid place-items-center w-screen"
       id="second-section"
     >
-      <h1 class="text-5xl md:text-9xl font-bold font-Poppins text-black">
+      <h1 class="text-5xl md:text-9xl font-bold font-Helvetica text-black">
         ASTRONOMY PICTURE <br />OF THE DAY <br />
         <a
           href="#third-section"
@@ -140,35 +149,41 @@
       id="third-section"
     >
       <h1
-        class="text-4xl md:text-5xl font-bold font-Poppins text-white uppercase text-center pt-12 relative z-10"
+        class="text-4xl md:text-5xl font-bold font-Helvetica text-white uppercase text-center pt-12 relative z-10"
         id="apodDate"
       ></h1>
       <div
         class="container mx-auto flex flex-col-reverse md:flex-row justify-between items-center"
       >
         <div
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          class="text-white w-full md:w-1/2 font-Poppins flex flex-col items-center md:justify-between gap-20 p-5"
+          class="text-white w-full md:w-1/2 font-Poppins flex flex-col items-center md:items-start md:justify-between gap-20 p-5"
         >
           <h1
-            class="text-4xl md:text-5xl font-bold font-Poppins text-white uppercase text-left pt-5 relative z-10"
+            class="text-4xl md:text-5xl font-bold font-Helvetica text-white uppercase text-left relative z-10 py-2 after:absolute after:top-0 after:right-0 after:w-full after:h-full after:bg-customWhite after:z-0 after:delay-200 reveal"
             id="apodTitle"
           ></h1>
           <p
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="300"
             class="text-md md:text-xl font-extralight text-justify indent-10"
             id="apodExplanation"
           ></p>
         </div>
 
-        <div class="w-full md:w-1/3 flex flex-col justify-center items-center">
-          <div
-            data-aos="fade-in"
-            data-aos-duration="1000"
-            class="relative group"
-          >
+        <div
+          class="w-full md:w-1/3 flex flex-col justify-center items-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="relative group">
             <a href="" id="apodImageLink" target="_blank"
-              ><img src="" alt="" class="w-full relative z-10" id="apodImage"
+              ><img
+                src=""
+                alt=""
+                class="w-full relative z-10"
+                id="apodImage"
+                loading="lazy"
             /></a>
             <div
               class="bg-white w-full h-full absolute top-3 -left-3 group-hover:top-0 group-hover:-left-0 transition-all duration-200 ease-in-out"
@@ -176,29 +191,296 @@
           </div>
           <h1
             id="apodCredits"
-            class="text-center font-Poppins text-xl text-customWhite mt-3 capitalize"
+            class="text-center font-Helvetica text-xl text-customWhite mt-3 capitalize"
           ></h1>
         </div>
       </div>
     </div>
     <!-- Fourth Section -->
     <div
-      class="h-full min-h-screen bg-customWhite relative flex flex-col gap-20"
+      class="h-full min-h-screen bg-customWhite relative md:sticky md:top-0 flex flex-col gap-20"
       id="fourth-section"
     >
       <h1
-        class="text-5xl font-bold font-Poppins text-customBlack uppercase text-center pt-12 relative z-10"
+        class="text-5xl font-bold font-Helvetica text-customBlack uppercase text-center w-fit mx-auto mt-10 relative z-10 after:absolute after:top-0 after:right-0 after:w-full after:h-full after:bg-customBlack after:z-0 after:delay-200 reveal"
       >
         <!-- apod in past week -->
-        APOD Archives for the Past Week
+        Astronomy Pictures of the Week
       </h1>
       <div class="container mx-auto">
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-5 gap-10"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-5 gap-7"
           id="archiveContainer"
         ></div>
       </div>
     </div>
+    <div
+      class="bg-mars bg-cover bg-center bg-no-repeat h-screen md:mt-[30vh] sticky top-0 text-center grid place-items-center w-screen"
+      id="fifth-section"
+    >
+      <h1
+        class="text-4xl md:text-9xl font-bold font-Helvetica text-customWhite drop-shadow-2xl"
+      >
+        PERSEVERANCE <br />ON MARS <br />
+        <a
+          href="#sixth-section"
+          class="goto-tag"
+          title="Astronomy Picture of the Day"
+          ><i class="fa-solid fa-chevron-down text-3xl animate-bounce"></i
+        ></a>
+      </h1>
+      <!-- chevron down  -->
+
+      <!-- <div
+      class="container flex w-full justify-end absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+    >
+      <img src="" alt="" id="apodImage" class="w-1/3" draggable="false" />
+    </div> -->
+      <!-- 2xl:py-56 2xl:px-44 xl:py-20 xl:px-16 -->
+    </div>
+    <div
+      class="bg-perseverance bg-cover bg-no-repeat bg-center h-screen relative md:sticky md:top-0 flex justify-center items-center text-center md:text-left md:block font-Poppins"
+      id="sixth-section"
+    >
+      <div
+        class="w-full md:w-1/2 text-customWhite relative z-10 h-full flex justify-center items-center"
+      >
+        <div class="w-3/4 mx-auto">
+          <h1
+            class="relative font-Helvetica text-3xl md:text-5xl xl:text-6xl font-bold text-customWhite justify-self-start after:absolute after:top-0 after:left-0 after:bg-customWhite after:w-full after:h-full after:z-0 after:delay-200 reveal"
+          >
+            PERSEVERANCE
+          </h1>
+          <p
+            class="md:mt-5 font-extralight text-xs md:text-base mt-2"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            The Mars Curiosity Rover, launched by NASA in 2011, is a robotic
+            exploration vehicle sent to Mars as part of the Mars Science
+            Laboratory mission. Equipped with advanced scientific instruments,
+            the rover has been exploring the planet's surface since its landing
+            in August 2012. Its primary mission is to search for evidence of
+            past or present microbial life on Mars, and it has already made
+            several groundbreaking discoveries, including evidence of ancient
+            water on the planet's surface.
+          </p>
+          <p
+            class="md:mt-5 font-extralight text-xs md:text-base mt-2"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            The Curiosity Rover is a testament to human ingenuity and our desire
+            to explore the unknown. With its advanced technology and impressive
+            capabilities, it has captured the imaginations of scientists,
+            engineers, and space enthusiasts around the world. Its ongoing
+            mission is part of a larger effort by NASA to explore Mars and to
+            better understand the planet's geology, climate, and potential for
+            supporting human life in the future.
+          </p>
+        </div>
+      </div>
+      <div
+        class="absolute h-screen w-full md:w-1/2 bg-customBlack top-0 left-0 opacity-30"
+      ></div>
+    </div>
+    <div
+      class="max-h-full min-h-screen relative md:sticky md:top-0 bg-customWhite md:mt-60"
+    >
+      <h1
+        class="text-3xl md:text-5xl font-bold font-Poppins text-customBlack uppercase text-center pt-12 relative z-10"
+      >
+        PERSEVERANCE'S RECENT IMAGES
+      </h1>
+      <div class="container mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-5 gap-7 mt-5 md:mt-20"
+          id="perseveranceRecent"
+        ></div>
+      </div>
+    </div>
+    <div
+      class="container-full max-h-full min-h-screen relative bg-deepField bg-cover bg-no-repeat bg-center before:absolute before:h-full before:w-full before:top-0 before:left-0 before:bg-black before:opacity-30 flex justify-center items-center md:mt-[20vh]"
+      id="about-section"
+    >
+      <div
+        class="relative z-10 container mx-auto flex flex-col-reverse md:flex-row"
+      >
+        <div
+          class="w-full md:w-1/2 flex justify-center h-full flex-col gap-5 md:p-0 p-10"
+        >
+          <h1
+            class="font-Poppins font-bold text-5xl text-customWhite w-fit relative after:absolute after:top-0 after:left-0 after:bg-customWhite after:w-full after:h-full after:z-0 after:delay-200 reveal"
+          >
+            ABOUT THIS PROJECT
+          </h1>
+          <p
+            class="font-Poppins text-lg font-extralight text-customWhite"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Cosmic Canvas: A Gallery of the Universe is a project that aims to
+            showcase the beauty and wonder of the cosmos through interactive and
+            immersive visualizations. The project was inspired by my childhood
+            passion for astronomy and space exploration, and my desire to share
+            it with others.
+          </p>
+          <p
+            class="font-Poppins text-lg font-extralight text-customWhite"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            The project uses two APIs from NASA: the Astronomy Picture of the
+            Day API, which provides stunning images of celestial objects and
+            phenomena, and the Mars Rover Images API, which allows users to
+            explore the surface of the Red Planet through the eyes of the
+            rovers. The project is the final project for my Human-Computer
+            Interaction subject, where I learned how to design and evaluate user
+            interfaces that are engaging, usable and accessible.
+          </p>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+          >
+            <h3 class="font-Helvetica text-2xl text-customWhite">
+              Technologies Used in this Project:
+            </h3>
+            <div
+              class="grid grid-cols-2 md:flex w-full justify-center items-center md:gap-10 gap-2 mt-2"
+            >
+              <a
+                class="w-14 md:w-24 hover:-translate-y-2 transition-all duration-300 ease-in-out"
+                href="http://www.w3.org/html/logo/"
+                rel="noopener"
+                target="_blank"
+                title="html5-badge-h-solo"
+              >
+                <img
+                  class="w-full h-full"
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
+                  width="63"
+                  height="64"
+                  alt="HTML5 Powered"
+                  title="HTML5 Powered"
+                />
+              </a>
+              <a
+                class="w-14 md:w-24 hover:-translate-y-2 transition-all duration-300 ease-in-out"
+                href="https://tailwindcss.com/"
+                rel="noopener"
+                target="_blank"
+                title="Tailwind CSS - Rapidly build modern websites without ever leaving your HTML."
+              >
+                <img
+                  class="w-full h-full"
+                  src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
+                  alt=""
+              /></a>
+              <a
+                class="w-14 md:w-24 hover:-translate-y-2 transition-all duration-300 ease-in-out"
+                href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/"
+                rel="noopener"
+                target="_blank"
+                title="JavaScript - Lightweight, interpreted, object-oriented language with first-class functions"
+              >
+                <img
+                  class="w-full h-full"
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                  alt="JavaScript-logo"
+                />
+              </a>
+
+              <a
+                class="flex hover:-translate-y-2 transition-all duration-300 ease-in-out justify-center items-center"
+                href="https://api.nasa.gov/"
+                rel="noopener"
+                target="_blank"
+                title="NASA Open APIs"
+              >
+                <div class="flex items-center justify-center bg-white">
+                  <img
+                    class="w-1/2"
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
+                    alt="NASA-logo"
+                  />
+                  <span
+                    class="h-full text-2xl md:text-4xl font-Arial text-customBlack w-1/2"
+                    >{APIs}</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="w-3/4 mx-auto">
+            <h1 class="font-Helvetica text-2xl text-customWhite">
+              Developed By: Dardee Jay Calura | ACT-2A
+            </h1>
+            <div class="w-3/4 mx-auto relative group mt-2">
+              <img
+                class="relative z-10 rounded-md shadow-xl top-0 left-0 group-hover:-top-1 group-hover:-left-1 group-hover:grayscale-0 transition-all duration-300 ease-in-out grayscale"
+                src="https://res.cloudinary.com/dk3msiid1/image/upload/v1683392453/cosmic-canvas/brogrammer_vycyxu.jpg"
+                alt=""
+              />
+              <div
+                class="w-full h-full absolute top-3 left-3 z-0 border-2 rounded-md border-customWhite group-hover:top-4 group-hover:left-4 transition-all duration-300 ease-in-out"
+              ></div>
+            </div>
+            <div
+              class="mt-10 flex items-center justify-around"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="600"
+            >
+              <h1 class="text-customWhite font-Helvetica text-lg">
+                Check out my Socials!
+              </h1>
+              <div class="flex text-5xl text-customWhite justify-around gap-10">
+                <a
+                  href="https://www.facebook.com/dardzz.calura/"
+                  class="hover:-translate-y-3 transition-all duration-200"
+                  title="Dardee Jay Calura - Facebook"
+                  ><i class="fa-brands fa-square-facebook"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/dardeejay.gg/?hl=en"
+                  class="hover:-translate-y-3 transition-all duration-200"
+                  title="Dardee Jay Calura - Instagram"
+                  ><i class="fa-brands fa-square-instagram"></i
+                ></a>
+                <a
+                  href="https://github.com/dardeejay"
+                  class="hover:-translate-y-3 transition-all duration-200"
+                  title="Dardee Jay Calura - Github"
+                  ><i class="fa-brands fa-square-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/dardee-jay-calura/"
+                  class="hover:-translate-y-3 transition-all duration-200"
+                  title="Dardee Jay Calura - LinkedIn"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      onclick="topFunction()"
+      type="button"
+      id="goToTop"
+      title="goToTop"
+      class="fixed z-50 bottom-10 hidden right-10 w-12 h-12 bg-transparent backdrop-invert rounded-full justify-center items-center text-lg text-gray-500 transition-all duration-200 ease-in-out hover:bg-customWhite hover:text-customBlack shadow-lg"
+      href="#nav-bar-menu"
+    >
+      <i class="fa-regular fa-square-caret-up"></i>
+    </button>
     <script src="./scripts/index.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

@@ -13,15 +13,24 @@ module.exports = {
       fontFamily: {
         navFont: ["Space Explorer", "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],
+        Helvetica: ["Helvetica Neue", "sans-serif"],
+        Roboto: ["Roboto", "sans-serif"],
+        Arial: ["Arial, Helvetica Neue", "sans-serif"],
       },
       animation: {
         rescale: "rescale 2s ease-in-out",
         appear: "appear 1.5s ease-in-out",
         appear2: "appear2 1s ease-in-out",
+        reveal: "reveal 1s ease-in-out",
       },
       backgroundImage: {
         space:
           "url('https://res.cloudinary.com/dk3msiid1/image/upload/v1682114678/cosmic-canvas/peakpx_gimnlz.jpg')",
+        mars: "url('https://res.cloudinary.com/dk3msiid1/image/upload/v1683315841/cosmic-canvas/mars-bg_uip4ot.jpg')",
+        perseverance:
+          "url('https://upload.wikimedia.org/wikipedia/commons/a/a4/Perseverance-Selfie-at-Rochette-Horizontal-V2.gif')",
+        deepField:
+          "url('https://res.cloudinary.com/dk3msiid1/image/upload/v1683371775/cosmic-canvas/deep-field_mlyu5r.jpg')",
       },
       keyframes: {
         rescale: {
@@ -39,6 +48,10 @@ module.exports = {
             transitionDelay: "2s",
           },
           to: { opacity: 1 },
+        },
+        reveal: {
+          from: { width: "100%" },
+          to: { width: "0%" },
         },
       },
     },
