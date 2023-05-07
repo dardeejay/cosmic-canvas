@@ -144,7 +144,9 @@ const getAPODArchive = async () => {
         "overflow-hidden",
         "hover:shadow-xl",
         "border",
-        "h-80",
+        "2xl:h-80",
+        "xl:h-64",
+        "h-64",
         "transition",
         "bg-customBlack",
         "group",
@@ -212,11 +214,12 @@ const getRoverRecent = async () => {
         "overflow-hidden",
         "hover:shadow-xl",
         "border",
-        "h-80",
+        "2xl:h-80",
+        "xl:h-64",
         "transition-all",
         "duration-500",
         "bg-customBlack",
-        "hover:-mt-4",
+        "hover:-mt-1",
         "hover:bg-black"
       );
       roverRecentItem.setAttribute("data-aos", "fade-right");
